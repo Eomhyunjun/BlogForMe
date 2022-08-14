@@ -6,7 +6,7 @@ export default function Home() {
       <Head>
         <title>Heom 블로그</title>
       </Head>
-      기본설정입니다
+      기본설정입니다?
     </div>
   )
 }
