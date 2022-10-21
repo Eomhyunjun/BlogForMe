@@ -1,4 +1,5 @@
-import Head from "next/head";
+import Head from 'next/head'
+import Body from 'component/Home/Body';
 
 export default function Home() {
   const notionImg =
@@ -6,15 +7,10 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Heom 블로그</title>
+        <title>Heom World</title>
       </Head>
       <div>
-      <a href={process.env.NEXT_PUBLIC_HEOMNOTION}>
-        <img src={notionImg} />
-      </a>
-      <a href={process.env.NEXT_PUBLIC_HEOMNOTION}>
-        노션 구경하기
-      </a>
+      <Body />
       </div>
     </div>
   );
