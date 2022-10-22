@@ -2,6 +2,7 @@ import { css } from "@emotion/css";
 import { HEADER_HEIGHT } from "styles/styleValue";
 
 function PageWrapper({children}) {
+
     return (
         <div className={marginTopHeader}>
             {children}

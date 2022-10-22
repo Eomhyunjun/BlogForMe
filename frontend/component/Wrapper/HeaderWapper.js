@@ -5,14 +5,17 @@ import { HEADER_HEIGHT, HEADER_ZINDEX } from "styles/styleValue";
 function HeaderWrapper({ children }) {
   const [left, setLeft] = useState(0);
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    const container = document.querySelector('main')
+
+    document.body.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      document.body.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const handleScroll = () => {
-    setLeft(left - window.scrollX);
+    setLeft(left - document.body.scrollX);
+    console.log(left);
   };
 
   return (

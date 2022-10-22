@@ -25,7 +25,7 @@ const HeaderBtn = ({ title, path, nowPath }) => {
   );
 };
 
-function GlobalHeader2({ username, avatar }) {
+function GlobalHeader() {
   const router = useRouter();
   const nowPath = router.pathname;
 
@@ -100,4 +100,4 @@ const confirmButtonWidth = css`
   width: fit-content;
 `;
 
-export default GlobalHeader2;
+export default GlobalHeader;
