@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import GlobalHeader from 'component/GlobalHeader/GlobalHeader'
-import Body from 'component/Home/Body'
+import Body from 'component/Home/MyPage'
 
 export default function Home() {
   return (

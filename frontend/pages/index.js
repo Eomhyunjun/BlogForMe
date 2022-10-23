@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Body from 'component/Home/Body';
+import MyPage from 'component/Home/MyPage';
 
 export default function Home() {
   const notionImg =
@@ -10,7 +10,7 @@ export default function Home() {
         <title>Heom World</title>
       </Head>
       <div>
-      <Body />
+      <MyPage />
       </div>
     </div>
   );
