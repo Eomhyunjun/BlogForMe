@@ -67,22 +67,26 @@ const cardFrame = css`
   height: fit-content;
   padding: 10px 9px;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid #dae1e6;
   overflow: hidden;
   &:hover {
-    transform: translate(0px, -10px);
+    transform: translate(0px, -5px);
     transition: 0.2s ease-in-out;
-    box-shadow: 0px 5px 15px 3px gray;
+    box-shadow: rgb(0 0 33 / 7%) 0px 16px 22.4px 4.8px,
+      rgb(0 0 33 / 5%) 0px 3.2px 16px 0px, rgb(0 0 33 / 7%) 0px 0px 1px 0px;
   }
 `;
 
 const cardProfile = css`
   margin-right: 10px;
+  padding: 4.25px 0;
 `;
 
 const cardImg = css`
   height: 40px;
+  width: 40px;
   margin-right: 10px;
+  text-align: center;
 `;
 
 const objectFit = css`

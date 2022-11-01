@@ -39,6 +39,7 @@ function Profile() {
 
 const profileContainer = css`
   width: 240px;
+  height: fit-content;
   padding: 30px 20px;
   border: 1px solid #dae1e6;
 `;

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import MyPage from 'component/Home/MyPage'
 
-export default function About() {
+export default function MyHome() {
   return (
     <div>
       <Head>

@@ -13,5 +13,6 @@ function PageWrapper({children}) {
 export default PageWrapper;
 
 const marginTopHeader = css`
-    margin-top: ${HEADER_HEIGHT}
+    margin-top: ${HEADER_HEIGHT};
+    min-width: calc(900px - 2%);
 `;

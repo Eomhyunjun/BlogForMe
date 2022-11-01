@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Heom 블로그</title>
       </Head>
-      홈입니다.
+      메인홈피
     </div>
   )
 }

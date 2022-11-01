@@ -2,7 +2,7 @@ import { css } from "@emotion/css";
 import Comments from "./parts/Comments";
 import CardContainer from "./parts/CardContainer";
 import Profile from "./parts/Profile";
-import MainBackground from "./MainBackground";
+import MainBackground from "./parts/MainBackground";
 
 function MyPage() {
   return (
@@ -11,9 +11,9 @@ function MyPage() {
       <div className={wrapper}>
         <div className={contents}>
           <Profile />
+          <CardContainer />
         </div>
         <div className={leftSpace}>
-          {/* <CardContainer /> */}
           <div className={marginBottom} />
           {/* <Comments /> */}
         </div>

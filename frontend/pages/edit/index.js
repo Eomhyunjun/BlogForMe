@@ -3,7 +3,7 @@ import React from 'react';
 function index() {
     return (
         <div>
-            블로그임당
+            설정페이지
         </div>
     );
 }

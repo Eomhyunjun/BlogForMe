@@ -34,9 +34,9 @@ function GlobalHeader() {
       <div className={cx(flex, flexBtw)}>
         <h3 className={homeTitle}>Heom World</h3>
         <div className={cx(rightCloumn)}>
-          <HeaderBtn title="Home" path="home" nowPath={nowPath} />
-          <HeaderBtn title="Blog" path="blog" nowPath={nowPath} />
-          <HeaderBtn title="About" path="about" nowPath={nowPath} />
+          <HeaderBtn title="메인 홈피" path="home" nowPath={nowPath} />
+          <HeaderBtn title="내 홈피" path="myhome" nowPath={nowPath} />
+          <HeaderBtn title="설정" path="edit" nowPath={nowPath} />
         </div>
       </div>
     </HeaderWrapper>

@@ -3,39 +3,27 @@ import { useEffect, useState } from "react";
 import { HEADER_HEIGHT, HEADER_ZINDEX } from "styles/styleValue";
 
 function HeaderWrapper({ children }) {
-  const [left, setLeft] = useState(0);
-  useEffect(() => {
-    const container = document.querySelector('main')
+  const [scrollLeft, setScrollLeft] = useState(0);
 
-    document.body.addEventListener("scroll", handleScroll);
+  const handleScroll = () => {
+    setScrollLeft(-window.scrollX);
+  };
+
+  useEffect(() => {
+    setScrollLeft(window.scrollX);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      document.body.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const handleScroll = () => {
-    setLeft(left - document.body.scrollX);
-    console.log(left);
-  };
-
-  return (
-    <div
-      className={cx(
-        css`
-          left: ${left}px;
-        `,
-        wrapperCss
-      )}
-    >
-      {children}
-    </div>
-  );
+  return <div className={wrapperCss(scrollLeft)}>{children}</div>;
 }
 
-const wrapperCss = css`
+const wrapperCss = (left) => css`
   position: fixed;
   top: 0px;
-  left: 0px;
+  left: ${left}px;
   z-index: ${HEADER_ZINDEX};
   background-color: white;
   min-width: calc(900px - 2%);

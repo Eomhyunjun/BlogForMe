@@ -5,8 +5,8 @@ import "styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <GlobalHeader />
       <PageWrapper>
+      <GlobalHeader />
       <Component {...pageProps} />{" "}
       </PageWrapper>
     </>
