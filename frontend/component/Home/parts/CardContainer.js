@@ -37,7 +37,6 @@ const CardBox = css`
   gap: 15px;
   width: 100%;
   height: auto;
-  margin-left: 15px;
 `;
 
 export default CardContainer;

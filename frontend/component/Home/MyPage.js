@@ -1,43 +1,47 @@
 import { css } from "@emotion/css";
-import Comments from "./parts/Comments";
+import Comments from "./parts/Comments/Comments";
 import CardContainer from "./parts/CardContainer";
 import Profile from "./parts/Profile";
-import MainBackground from "./parts/MainBackground";
 
 function MyPage() {
   return (
-    <>
-      <MainBackground />
       <div className={wrapper}>
-        <div className={contents}>
+        <section className={leftSection}>
           <Profile />
-          <CardContainer />
-        </div>
-        <div className={leftSpace}>
+        </section>
+        <section className={rightSection}>
+          {/* <CardContainer /> */}
+          <div className={cal}/>
           <div className={marginBottom} />
-          {/* <Comments /> */}
-        </div>
+          <Comments />
+        </section>
       </div>
-    </>
   );
 }
 
 const wrapper = css`
-  // display: flex;
+  display: flex;
   // gap: 15px;
   padding: 15px;
   width: 100%;
 `;
 
-const leftSpace = css`
+const rightSection = css`
   flex: 1;
+  margin-left: 15px;
+`;
+
+const cal = css`
+  width: 100%;
+  height: 500px;
+  border: 1px solid #dae1e6;
 `;
 
 const marginBottom = css`
   margin-bottom: 15px;
 `;
 
-const contents = css`
+const leftSection = css`
   display: flex;
 `;
 
