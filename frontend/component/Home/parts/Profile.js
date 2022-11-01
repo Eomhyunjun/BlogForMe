@@ -14,15 +14,15 @@ function Profile() {
         <div className={profileInfoStyle}>
           <p className={userNameFont}>엄현준</p>
           <div className={logoContainer}>
-          <a href="https://github.com/Eomhyunjun" className={logoColor}>
-            <Image
-              src={githubLogo}
-              alt="GitHub Logo"
-              placeholder="github"
-              width={20}
-              height={20}
-            />
-          </a>
+            <a href="https://github.com/Eomhyunjun" className={logoColor}>
+              <Image
+                src={githubLogo}
+                alt="GitHub Logo"
+                placeholder="github"
+                width={20}
+                height={20}
+              />
+            </a>
           </div>
           <div>
             {/* <span>팔로우</span>
@@ -76,6 +76,7 @@ const userDesc = css`
 `;
 
 const logoColor = css`
+  background-color: transparent;
   filter: opacity(0.3) drop-shadow(0 0 0 #b8bdc3);
 `;
 
