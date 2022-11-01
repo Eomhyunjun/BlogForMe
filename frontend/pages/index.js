@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import MyPage from 'component/Home/MyPage';
+import MainBackground from 'component/Home/parts/MainBackground';
 
 export default function Home() {
   const notionImg =
@@ -10,6 +11,7 @@ export default function Home() {
         <title>Heom World</title>
       </Head>
       <div>
+      <MainBackground />
       <MyPage />
       </div>
     </div>
