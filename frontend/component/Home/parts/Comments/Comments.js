@@ -4,11 +4,15 @@ import CommentsList from "./CommentsList";
 
 function Comments() {
   return (
-    <div>
+    <div className={container}>
       <CommentsList />
       <CommentsInput />
     </div>
   );
 }
+
+const container = css`
+  padding: 10px;
+`;
 
 export default Comments;

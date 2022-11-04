@@ -13,7 +13,7 @@ function CommentsInput() {
 
     setCommentValue(text);
     if (count > 2)
-        setTextAreaHeight(60 + ((count - 2) * 12));
+        setTextAreaHeight(60 + ((count - 2) * 14));
   }
 
   function submitHandler(e)
