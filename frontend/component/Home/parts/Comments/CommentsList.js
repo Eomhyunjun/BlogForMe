@@ -3,7 +3,7 @@ import { css } from "@emotion/css";
 function CommentsList(props) {
     return (
         <div className={container}>
-            <h3 className={contentsListTitle}>댓글</h3>
+            <h3 className={contentsListTitle}>방명록</h3>
         </div>
     );
 }
