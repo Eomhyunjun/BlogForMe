@@ -1,16 +1,22 @@
 import { css } from "@emotion/css";
 import githubLogo from "asset/logo/githubLogo.png";
 import Image from "next/image";
+import myProfileImg from "asset/img/anigif2.gif";
 
 function Profile() {
   return (
     <div className={profileContainer}>
       <section className={myProfile}>
-        <img
-          className={profileImgStyle}
-          alt="프로필사진"
-          src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fdf7335d5-57f3-407d-bbe5-44ed398b428e%2Fanigif2.gif?table=block&id=660d3106-b35e-42ba-9532-dbe3520d0bfb&spaceId=39262b28-deb0-4e99-938a-d51f7073ff6f&userId=76a84c7e-c275-4b8f-a744-a3bd7000333c&cache=v2"
-        />
+        <div className={profileImgStyle}>
+          <Image
+            className={profileImgStyle}
+            alt="프로필 사진"
+            width={70}
+            height={70}
+            placeholder='프로필 사진'
+            src={myProfileImg}
+          />
+        </div>
         <div className={profileInfoStyle}>
           <p className={userNameFont}>엄현준</p>
           <div className={logoContainer}>
