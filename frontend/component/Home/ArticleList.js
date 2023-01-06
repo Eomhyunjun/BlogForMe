@@ -6,7 +6,7 @@ function ArticleList({ title, contents }) {
   const contentsTitleJSX = useMemo(
     () =>
     contents.map(({ title, link }) => (
-        <a className={contentsTitle} href={link}>
+        <a key="title" className={contentsTitle} href={link}>
           {title}
         </a>
       )),

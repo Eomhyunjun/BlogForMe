@@ -19,15 +19,3 @@ const analytics = getAnalytics(app);
 
 const imagesRef = ref(storage, "/images");
 
-// export function getProfileImage() {
-//   if (typeof window !== "undefined") {
-//     listAll(imagesRef).then((res) => {
-//       res.prefixes.forEach((folderRef) => {
-//         // 폴더 ref
-//       });
-
-//       const nowImgRef = res.items.map((itemRef) => itemRef);
-//       console.log(nowImgRef);
-//     });
-//   }
-// }

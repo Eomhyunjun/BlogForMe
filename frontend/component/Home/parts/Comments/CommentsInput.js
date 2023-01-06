@@ -62,7 +62,7 @@ const confirmButton = (commentValue) => css`
   font-size: 12px;
   color: ${commentValue !== '' ? 'white' : '#bcc0c4'};
   &:hover {
-    background-color: #88b7c6e8;
+    background-color: #88b7c6;
     color: white;
   }
 `;

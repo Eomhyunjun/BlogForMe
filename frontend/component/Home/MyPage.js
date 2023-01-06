@@ -33,7 +33,10 @@ function MyPage() {
     },
     {
       listTitle: "논리회로",
-      contents: [],
+      contents: [{
+        title: "동기식 순차논리",
+        link: 'https://heom.notion.site/10-1-5bd11a454a5d41cf97a25dffd5608be6',
+      },],
     }
   ];
   return (
