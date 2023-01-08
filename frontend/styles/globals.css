@@ -20,6 +20,7 @@ a {
   box-sizing: border-box;
   text-align: inherit;
   background-color: inherit;
+  border-radius: inherit;
 }
 
 textarea {
@@ -34,6 +35,7 @@ textarea:focus {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;

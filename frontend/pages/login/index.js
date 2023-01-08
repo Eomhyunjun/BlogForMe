@@ -1,5 +1,7 @@
-import { css, keyframes } from "@emotion/css";
+import { css, keyframes, cx } from "@emotion/css";
 import { useState } from "react";
+import googleLogo from "asset/logo/google500Logo.png"
+import Image from "next/image";
 
 function index(props) {
   const [animationStart, setAnimationStart] = useState(false);
@@ -12,52 +14,50 @@ function index(props) {
 
   return (
     <>
-      <section className={container(animationStart)}>
+      <section className={container}>
         <div>
           <h1 className={mainTitle}>HEOM WORLD</h1>
         </div>
         <div className={loginBox}>
-          <div className={buttonBox}>
-            <button
-              type="button"
-              onClick={handleEmailLogin}
-              className={loginSelectButton}
-            >
-              이메일로 시작하기
-            </button>
-            <button
-              type="button"
-              onClick={handleGoogleLogin}
-              className={loginSelectButton}
-            >
-              구글 아이디로 시작하기
-            </button>
-          </div>
-        </div>
-      </section>
-      {animationStart && (
-        <section>
+          <button
+            type="button"
+            onClick={handleGoogleLogin}
+            className={cx(loginButton, googleLogin)}
+          >
+            <div className={googleLogoWrapper}>
+              <Image
+                src={googleLogo}
+                alt="Google Logo"
+                placeholder="github"
+                width={20}
+                height={20}
+              />
+              <span>Google로 계속하기</span>
+            </div>
+          </button>
+
+          <div className={divtLine} />
+
+          <label className={emailLabel} htmlFor="googleLogin">이메일</label>
           <div className={inputWrapper}>
-            <input className={inputStyle} placeholder="이메일" />
+            <input className={inputStyle} id="googleLogin" placeholder="이메일" />
           </div>
           <div className={inputWrapper}>
             <input className={inputStyle} placeholder="비밀번호" />
           </div>
-        </section>
-      )}
+          <button
+            type="button"
+            onClick={handleEmailLogin}
+            className={cx(loginButton, emailLogin)}
+          >
+            이메일로 계속하기
+          </button>
+          <button className={joinButton}>이메일로 회원가입하기</button>
+        </div>
+      </section>
     </>
   );
 }
-
-const emailLoginClickedAnimation = keyframes`
-    0% {
-    }
-    100% {
-        top: 50%;
-        left: 10%;
-        transform: translate(0%, -50%);
-    }
-`;
 
 const buttonGradient = keyframes`
     0% {
@@ -68,16 +68,11 @@ const buttonGradient = keyframes`
     }
 `;
 
-const container = (isEmailLoginClicked) => css`
+const container = css`
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  ${isEmailLoginClicked &&
-  `animation: ${emailLoginClickedAnimation} 2s ease 1;
-    animation-fill-mode: forwards;
-    `}
 `;
 
 const mainTitle = css`
@@ -100,26 +95,38 @@ const loginBox = css`
 
 const inputWrapper = css`
   width: 300px;
-  height: 50px;
+  height: 42px;
   margin-bottom: 10px;
-
-  border: 1px solid #dae1e6;
-  border-radius: 5px;
-  border-collapse: collapse;
 `;
 
 const inputStyle = css`
   width: 100%;
   height: 100%;
+  border-radius: 8px;
+  border: 1px solid #dae1e6;
   padding: 10px 10px 10px 10px;
 `;
 
-const buttonBox = css``;
-
-const loginSelectButton = css`
+const loginButton = css`
   width: 100%;
   height: 44px;
+  font-size: 14px;
 
+  border-radius: 8px;
+
+  cursor: pointer;
+  text-align: center;
+`;
+
+
+const googleLogin = css`
+  border: 1px solid rgba(15, 15, 15, 0.15);
+  &:hover {
+    background-color: #f6f6f6;
+  }
+`;
+
+const emailLogin = css`
   background: linear-gradient(
     -45deg,
     #abe5e6,
@@ -133,11 +140,6 @@ const loginSelectButton = css`
   );
   background-size: 400%;
 
-  border-radius: 8px;
-  margin-bottom: 10px;
-
-  cursor: pointer;
-  text-align: center;
   color: #fdfdfd;
   &:hover {
     animation: ${buttonGradient} 2s ease 1;
@@ -146,18 +148,45 @@ const loginSelectButton = css`
   }
 `;
 
-const submitButton = css`
-  width: 73px;
-  height: 44px;
+const googleLogoWrapper = css`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+`;
 
-  background-color: #88b7c6;
-  border-radius: 8px;
+const emailLabel = css`
+  display: block;
+  height: 13px;
+  font-size: 13px;
+  color: rgba(55, 53, 47, 0.65);
 
+  margin-bottom: 9px;
+`;
+
+const divtLine = css`
+  width: 100%;
+  height: 1px;
+  margin: 20px 0; 
+  border-bottom: solid 1px #efefef;
+`;
+
+// color: rgba(55, 53, 47, 0.65);
+const joinButton = css`
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0px auto;
   text-align: center;
-  color: #fdfdfd;
+
+  font-size: 13px;
+  color: rgba(55, 53, 47, 0.65); 
   &:hover {
-    background-color: #88b7c6e8;
-    color: white;
+    background: linear-gradient(-45deg, #abe5e6,#7062f0,#e73c7e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 `;
 
