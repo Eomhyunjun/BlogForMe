@@ -1,31 +1,29 @@
-import GlobalHeader from "component/GlobalHeader/GlobalHeader";
 import PageRouter from "component/PageRouter";
 import PageWrapper from "component/Wrapper/PageWrapper";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "firebaseFuc/firebase";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import "styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  const [init, setInit] = useState(false);
+  const [init, setInit] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userObj, setUserObj] = useState(null);
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setIsLoggedIn(true);
-        setUserObj(user);
-        // const uid = user.uid;
+    // onAuthStateChanged(auth, (user) => {
+    //   if (user) {
+    //     setIsLoggedIn(true);
+    //     setUserObj(user);
+    //     // const uid = user.uid;
 
-      } else {
-        setIsLoggedIn(false);
-        // User is signed out
-      }
-      setInit(true);
-    });
-  })
+    //   } else {
+    //     setIsLoggedIn(false);
+    //     // User is signed out
+    //   }
+    //   setInit(true);
+    // });
+  }, [])
 
   return (
     <>

@@ -11,19 +11,19 @@ function MyPage() {
       contents: [
         {
           title: "C언어 튜텨링 4회차",
-          link: "https://heom.notion.site/C-C-C-4-1d5ef83231594666b4a02d5c1c91ee87",
+          link: "https://nforu.notion.site/C-C-C-4-1d5ef83231594666b4a02d5c1c91ee87",
         },
         {
           title: "C언어 튜텨링 3회차",
-          link: "https://heom.notion.site/C-C-C-3-160b7f00f7dd4be0be382e2c2add246c",
+          link: "https://nforu.notion.site/C-C-C-3-160b7f00f7dd4be0be382e2c2add246c",
         },
         {
           title: "C언어 튜텨링 2회차",
-          link: "https://heom.notion.site/C-C-C-2-c109712daaf34c078e7e3d839ee993f8",
+          link: "https://nforu.notion.site/C-C-C-2-c109712daaf34c078e7e3d839ee993f8",
         },
         {
           title: "C언어 튜텨링 1회차",
-          link: "https://heom.notion.site/C-C-C-1-a5fadcd7f8ab4df28fd98e65f90fd1a3",
+          link: "https://nforu.notion.site/C-C-C-1-a5fadcd7f8ab4df28fd98e65f90fd1a3",
         },
       ],
     },
@@ -35,7 +35,7 @@ function MyPage() {
       listTitle: "논리회로",
       contents: [{
         title: "동기식 순차논리",
-        link: 'https://heom.notion.site/10-1-5bd11a454a5d41cf97a25dffd5608be6',
+        link: 'https://nforu.notion.site/10-1-5bd11a454a5d41cf97a25dffd5608be6',
       },],
     }
   ];

@@ -1,13 +1,14 @@
 import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import GlobalHeader from './GlobalHeader/GlobalHeader';
 
 function PageRouter({ Component, pageProps, isLoggedIn, userObj }) {
     const router = useRouter();
     useEffect(() => {
         if (!isLoggedIn)
-            console.log(hi);
+            console.log('hi');
         // router.push('/login')
-        console.log(bye);
+        console.log('bye');
     }, [isLoggedIn])
 
 
